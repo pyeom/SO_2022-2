@@ -5,9 +5,16 @@
 
 void visualizacion_anno(int anno){
     int cantidad_total, cant_baja, cant_media, cant_alta, anno_baja, anno_media, anno_alta;
+    DIR *dp = opendir("/%d", anno);
+    struct dirent *de = NULL;
 
     /* ABRIR EL DIRECTORIO DEL AÑO, RECORRER Y CONTAR CUANTOS ARCHIVOS HAY, SUMAR TANTO A LA VARIABLE CANT_XX
     COMO A ANNO_XX */
+
+    cantidad_total = 0;
+    
+    system("cd 3000+");
+    
 
     printf("La cantidad de estudiantes de %d son: ", anno);
     printf("%d", cantidad_total);
