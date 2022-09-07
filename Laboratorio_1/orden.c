@@ -7,7 +7,8 @@
 void mover(){
     DIR *dp = opendir("/test");
     FILE *fp;
-    int prioridad, anno, subfolder;
+    char *comando;
+    int prioridad, anno;
     struct dirent *de = NULL;
 
     while ((de = readdir(dp))){ //Itera sobre cada File del directorio
@@ -19,19 +20,47 @@ void mover(){
 
         fclose(fp);
         
-        if (prioridad >= 9000){ //Mueve el file al folder correspondiente
-            subfolder = 3;
-            system("mv %s ~/%i/9000+", d_name, anno);
+        if ((*int)anno == 2019){
+
+             if (prioridad >= 9000){ //Mueve el file al folder correspondiente
+            system("mv %s ~/2019/9000+", d_name);
+            }
+
+            else if (prioridad >= 6000){
+                system("mv %s ~/2019/6000+", d_name);
+            }
+
+            else{
+                system("mv %s ~/2019/3000+", d_name);
+            }
         }
 
-        else if (prioridad >= 6000){
-            subfolder = 2;
-            system("mv %s ~/%i/6000+", d_name, anno);
+        else if ((*int)anno == 2020){
+            if (prioridad >= 9000){ //Mueve el file al folder correspondiente
+                system("mv %s ~/2020/9000+", d_name);
+            }
+
+            else if (prioridad >= 6000){
+                system("mv %s ~/2020/6000+", d_name);
+            }
+
+            else{
+                system("mv %s ~/2020/3000+", d_name);
+            }
         }
 
         else{
-            subfolder = 1;
-            system("mv %s ~/%i/3000+", d_name, anno);
+            if (prioridad >= 9000){ //Mueve el file al folder correspondiente
+                system("mv %s ~/2021/9000+", d_name);
+            }
+
+            else if (prioridad >= 6000){
+                system("mv %s ~/2021/6000+", d_name);
+            }
+
+            else{
+                system("mv %s ~/2021/3000+", d_name);
+            }
         }
         
 
