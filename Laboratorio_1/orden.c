@@ -19,26 +19,20 @@ void leer(char *nombre, char *directorio){
         return;
     }
 
-    // read one character at a time and
-    // display it to the output
     fscanf(fp, "%d\n%d", &anno, &prioridad);
-    char ch;
-    while ((ch = fgetc(fp)) != EOF)
-        putchar(ch);
 
-    // close the file
     //printf ("el anno es '%d' y su prioridad '%d' \n", anno, prioridad);
     char aux[100];
     if (anno == 2019){
              if (prioridad >= 9000){ //Mueve el file al folder correspondiente
-                strcat(aux, "mv ");
+                strcpy(aux, "mv ");
                 strcat(aux, buffer);
                 strcat(aux, " ./2019/9000+");
                 system(aux);
             }
 
             else if (prioridad >= 6000){
-                strcat(aux, "mv ");
+                strcpy(aux, "mv ");
                 strcat(aux, buffer);
                 strcat(aux, " ./2019/6000+");
                 system(aux);
@@ -96,6 +90,7 @@ void leer(char *nombre, char *directorio){
                 system(aux);
             }
         }
+     // close the file
     fclose(fp);
 }
 
