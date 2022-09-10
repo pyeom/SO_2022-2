@@ -5,13 +5,16 @@
 
 void visualizacion(){
     int anno;
-    int cantidad_total = cant_baja = cant_media = cant_alta = anno_baja = anno_media = anno_alta = 0;
+    int cantidad_total, cant_baja, cant_media, cant_alta, anno_baja, anno_media, anno_alta = 0;
 
     struct dirent *pDirent;
     DIR *pDir, *aux;
 
-    scanf("Año que desea revisar: ", anno);
+    scanf("Año que desea revisar: %d", &anno);
 
+
+    // Entra al directorio del año seleccionado
+    // Falta que vuelva a los demás directorios y sume como corresponda, luego repetir para los demás
     if (anno == 2019){
         pDir = opendir("/2019");
         if (pDir == NULL) {
@@ -26,7 +29,7 @@ void visualizacion(){
                 printf ("[%s]\n", pDirent->d_name);
 
                 aux = opendir(pDirent->d_name);
-                while ((pDirent = readdir(aux);) != NULL) {
+                while ((pDirent = readdir(aux)) != NULL) {
 
                     if((strcmp(pDirent->d_name,".")==0 || strcmp(pDirent->d_name,"..")==0 || (*pDirent->d_name) == '.' )){}
                     else {
