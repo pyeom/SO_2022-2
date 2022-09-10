@@ -1,80 +1,101 @@
 <<<<<<< HEAD:Laboratorio_1/visualizacion.h
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <dirent.h>
 
-void visualizacion_anno(int anno){
-    int cantidad_total, cant_baja, cant_media, cant_alta, anno_baja, anno_media, anno_alta;
+void listFiles(const char* dirname, int anno, int number, int *cantidad_total, int *cant_prio, int *cant_annoprio) {
+    DIR* dir = opendir(dirname);
+    if (dir == NULL) {
+        return;
+    }
 
-    /* ABRIR EL DIRECTORIO DEL AÑO, RECORRER Y CONTAR CUANTOS ARCHIVOS HAY, SUMAR TANTO A LA VARIABLE CANT_XX
-    COMO A ANNO_XX */
+    printf("Reading files in: %s\n", dirname);
 
-    printf("La cantidad de estudiantes de %d son: ", anno);
-    printf("%d", cantidad_total);
-    printf("\n");
-    printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 3000-5999 son: ", anno);
-    printf("%d", anno_baja);
-    printf("\n");
-    printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 6000-8999 son: ", anno);
-    printf("%d", anno_media);
-    printf("\n");
-    printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 9000+ son: ", anno);
-    printf("%d", anno_alta);
+    struct dirent* entity;
+    entity = readdir(dir);
+    while (entity != NULL) {
+        if (strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0) {
+            printf("nombre del archivo %s \n", entity->d_name);
+            *cant_prio += 1;
+            printf("hola %d \n", *cant_prio);
+            if (number == 1){
+                *cantidad_total += 1;
+                *cant_annoprio += 1;
+            }
+        }
+        entity = readdir(dir);
+        
+    }
 
-    /* ABRIR LOS DIRECTORIOS DE LOS OTROS AÑOS Y SUMAR SEGUN CORRESPONDA
-    EN LA VARIABLE CANT_XX*/
-    printf("\nDel total de estudiantes:");
-    printf("\n");
-    printf("    ");
-    printf("Existen %d con prioridad 3000-5999.", cant_baja);
-    printf("\n");
-    printf("    ");
-    printf("Existen %d con prioridad 6000-8999.", cant_media);
-    printf("\n");
-    printf("    ");
-    printf("Existen %d con prioridad 9000+.", cant_alta);
-    return;
+    closedir(dir);
 }
-=======
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <dirent.h>
 
-void visualizacion_anno(int anno){
-    int cantidad_total, cant_baja, cant_media, cant_alta, anno_baja, anno_media, anno_alta;
-    DIR *dp = opendir("/%d", anno);
-    struct dirent *de = NULL;
+int main(int argc, char* argv[]) {
+    int cantidad_total = 0, cant_baja = 0, cant_media = 0, cant_alta = 0, anno_baja = 0, anno_media = 0, anno_alta = 0;
+    int intanno;
+    printf("Ingrese el ano de ingreso: ");
+    scanf("%d", &intanno);  
+    printf("Number = %d \n",intanno);
 
-    /* ABRIR EL DIRECTORIO DEL AÑO, RECORRER Y CONTAR CUANTOS ARCHIVOS HAY, SUMAR TANTO A LA VARIABLE CANT_XX
-    COMO A ANNO_XX */
+    if (intanno == 2019){
+        //2019
+        listFiles("./2019/3000+", intanno, 1, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2019/6000+", intanno, 1, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2019/9000+", intanno, 1, &cantidad_total, &cant_alta, &anno_alta);
+        //2020
+        listFiles("./2020/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2020/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2020/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+        //2021
+        listFiles("./2021/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2021/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2021/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+    }
+    if (intanno == 2020){
+        //2019
+        listFiles("./2019/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2019/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2019/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+        //2020
+        listFiles("./2020/3000+", intanno, 1, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2020/6000+", intanno, 1, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2020/9000+", intanno, 1, &cantidad_total, &cant_alta, &anno_alta);
+        //2021
+        listFiles("./2021/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2021/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2021/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+    }
+    if (intanno == 2021){
+        //2019
+        listFiles("./2019/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2019/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2019/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+        //2020
+        listFiles("./2020/3000+", intanno, 0, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2020/6000+", intanno, 0, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2020/9000+", intanno, 0, &cantidad_total, &cant_alta, &anno_alta);
+        //2021
+        listFiles("./2021/3000+", intanno, 1, &cantidad_total, &cant_baja, &anno_baja);
+        listFiles("./2021/6000+", intanno, 1, &cantidad_total, &cant_media, &anno_media);
+        listFiles("./2021/9000+", intanno, 1, &cantidad_total, &cant_alta, &anno_alta);
+    }
 
-    cantidad_total = 0;
-    
-    system("cd 3000+");
-    
-
-    printf("La cantidad de estudiantes de %d son: ", anno);
+    printf("La cantidad de estudiantes de %d son: ", intanno);
     printf("%d", cantidad_total);
     printf("\n");
     printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 3000-5999 son: ", anno);
+    printf("La cantidad de estudiantes de %d con prioridad 3000-5999 son: ", intanno);
     printf("%d", anno_baja);
     printf("\n");
     printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 6000-8999 son: ", anno);
+    printf("La cantidad de estudiantes de %d con prioridad 6000-8999 son: ", intanno);
     printf("%d", anno_media);
     printf("\n");
     printf("    ");
-    printf("La cantidad de estudiantes de %d con prioridad 9000+ son: ", anno);
+    printf("La cantidad de estudiantes de %d con prioridad 9000+ son: ", intanno);
     printf("%d", anno_alta);
 
-    /* ABRIR LOS DIRECTORIOS DE LOS OTROS AÑOS Y SUMAR SEGUN CORRESPONDA
-    EN LA VARIABLE CANT_XX*/
+
     printf("\nDel total de estudiantes:");
     printf("\n");
     printf("    ");
@@ -84,7 +105,7 @@ void visualizacion_anno(int anno){
     printf("Existen %d con prioridad 6000-8999.", cant_media);
     printf("\n");
     printf("    ");
-    printf("Existen %d con prioridad 9000+.", cant_alta);
-    return;
+    printf("Existen %d con prioridad 9000+. \n", cant_alta);
+    return 0;
 }
 >>>>>>> main:Laboratorio_1/visualizacion.c
