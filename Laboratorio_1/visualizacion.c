@@ -1,7 +1,10 @@
-<<<<<<< HEAD:Laboratorio_1/visualizacion.h
+
+HEAD:Laboratorio_1/visualizacion.h
+
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+
 
 void listFiles(const char* dirname, int anno, int number, int *cantidad_total, int *cant_prio, int *cant_annoprio) {
     DIR* dir = opendir(dirname);
@@ -81,6 +84,7 @@ int main(int argc, char* argv[]) {
     }
 
     printf("La cantidad de estudiantes de %d son: ", intanno);
+
     printf("%d", cantidad_total);
     printf("\n");
     printf("    ");
@@ -107,5 +111,5 @@ int main(int argc, char* argv[]) {
     printf("    ");
     printf("Existen %d con prioridad 9000+. \n", cant_alta);
     return 0;
+
 }
->>>>>>> main:Laboratorio_1/visualizacion.c
