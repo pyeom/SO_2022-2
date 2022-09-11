@@ -12,15 +12,14 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
         return;
     }
 
-    printf("Reading files in: %s\n", dirname);
+    printf("Leyendo archivos en: %s\n", dirname);
 
     struct dirent* entity;
     entity = readdir(dir);
     while (entity != NULL) {
         if (strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0) {
-            printf("nombre del archivo %s \n", entity->d_name);
             *cant_prio += 1;
-            printf("hola %d \n", *cant_prio);
+            //number sera 1 si estamos en el año que nos piden, 0 si no es el caso
             if (number == 1){
                 *cantidad_total += 1;
                 *cant_annoprio += 1;
@@ -38,7 +37,6 @@ int main(int argc, char* argv[]) {
     int intanno;
     printf("Ingrese el ano de ingreso: ");
     scanf("%d", &intanno);  
-    printf("Number = %d \n",intanno);
 
     if (intanno == 2019){
         //2019
