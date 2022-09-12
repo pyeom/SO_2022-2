@@ -109,7 +109,6 @@ void mover () {
     while ((pDirent = readdir(pDir)) != NULL)  {
         if((strcmp(pDirent->d_name,".")==0 || strcmp(pDirent->d_name,"..")==0 || (*pDirent->d_name) == '.' )){}
         else {
-        printf ("[%s]\n", pDirent->d_name);
         leer(pDirent->d_name, "./test");
         }
     }
