@@ -4,7 +4,9 @@
 
 #include "funciones.h"
 
-
+/*
+Abre cada directorio y cuenta cuantos archivos hay en el, luego le suma a las cantidades segun la aparicion del archivo
+*/
 void listFiles(const char* dirname, int anno, int number, int *cantidad_total, int *cant_prio, int *cant_annoprio) {
     DIR* dir = opendir(dirname);
     if (dir == NULL) {
@@ -31,6 +33,11 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
     closedir(dir);
 }
 
+
+/*
+Pide un año de ingreso para luego revisar cuantos archivos se encuentran en el direcotrio seleccionado llamando a la funcion
+listFiles(), finalmente printea toda la informacion como se especifica en las reglas
+*/
 int visualizacion() {
     int cantidad_total = 0, cant_baja = 0, cant_media = 0, cant_alta = 0, anno_baja = 0, anno_media = 0, anno_alta = 0;
     int intanno;
