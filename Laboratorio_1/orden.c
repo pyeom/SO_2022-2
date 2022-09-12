@@ -5,7 +5,9 @@
 
 #include "funciones.h"
 
-
+/*
+Lee el interior del archivo de texto y luego lo mueve a la carpeta correspondiente teniendo en cuenta el contenido
+*/
 void leer(char *nombre, char *directorio){
     char buffer[50];
     strcpy(buffer, directorio);
@@ -95,6 +97,12 @@ void leer(char *nombre, char *directorio){
     fclose(fp);
 }
 
+
+
+/*
+Abre el directorio "test" en busca de los archivos que hay que mover, recorre cada archivo del directorio y
+llama a la funcion leer() con cada archivo.
+*/
 void mover () {
     struct dirent *pDirent;
     DIR *pDir;
