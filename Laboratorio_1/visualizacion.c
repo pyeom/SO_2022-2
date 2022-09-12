@@ -1,9 +1,8 @@
-
-HEAD:Laboratorio_1/visualizacion.h
-
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+
+#include "funciones.h"
 
 
 void listFiles(const char* dirname, int anno, int number, int *cantidad_total, int *cant_prio, int *cant_annoprio) {
@@ -32,7 +31,7 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
     closedir(dir);
 }
 
-int main(int argc, char* argv[]) {
+int visualizacion() {
     int cantidad_total = 0, cant_baja = 0, cant_media = 0, cant_alta = 0, anno_baja = 0, anno_media = 0, anno_alta = 0;
     int intanno;
     printf("Ingrese el ano de ingreso: ");
