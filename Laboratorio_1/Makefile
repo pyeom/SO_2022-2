@@ -1,22 +1,17 @@
-.SUFFIXES: .o .c
-.c.o:
-		$(CC) -c $(CFLAGS) $<
+all: output
 
+output: main.o orden.o visualizacion.o
+	gcc -o output main.o orden.o visualizacion.o
 
-CC=gcc
-CFLAGS= -g -Wall
-SOURCE = orden.c visualizacion.c 
-OBJ = $(SOURCE: .c=.o)
-EXE = orden visualizacion
+main.o: main.c funciones.h
+	gcc -c main.c
 
-all: $(SOURCE) $(EXE)
+orden.o: orden.c funciones.h
+	gcc -c orden.c
 
-$(EXE): $(OBJ)
-		$(CC) $(OBJ) -o $@
-
-%.o: %.c 
-		$(CC) $(CFLAGS) $< -0 $@
+visualizacion.o: visualizacion.c funciones.h
+	gcc -c visualizacion.c
 
 clean:
-		rm -rf $(OBJ) $(EXE)
+	rm -f output *.o
 

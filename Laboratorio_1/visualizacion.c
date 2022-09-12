@@ -1,9 +1,8 @@
-
-HEAD:Laboratorio_1/visualizacion.h
-
 #include <stdio.h>
 #include <string.h>
 #include <dirent.h>
+
+#include "funciones.h"
 
 
 void listFiles(const char* dirname, int anno, int number, int *cantidad_total, int *cant_prio, int *cant_annoprio) {
@@ -18,9 +17,7 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
     entity = readdir(dir);
     while (entity != NULL) {
         if (strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0) {
-            printf("nombre del archivo %s \n", entity->d_name);
             *cant_prio += 1;
-            printf("hola %d \n", *cant_prio);
             if (number == 1){
                 *cantidad_total += 1;
                 *cant_annoprio += 1;
@@ -33,12 +30,11 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
     closedir(dir);
 }
 
-int main(int argc, char* argv[]) {
+int visualizacion() {
     int cantidad_total = 0, cant_baja = 0, cant_media = 0, cant_alta = 0, anno_baja = 0, anno_media = 0, anno_alta = 0;
     int intanno;
     printf("Ingrese el ano de ingreso: ");
     scanf("%d", &intanno);  
-    printf("Number = %d \n",intanno);
 
     if (intanno == 2019){
         //2019

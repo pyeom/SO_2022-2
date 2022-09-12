@@ -12,3 +12,12 @@ el mismo programa.
 - Se asume que las prioridades nunca serán menores a 3000.
 - Se asume que los datos serán entregados en una carpeta aparte, de la cual 
 tendrán que moverse hacia la carpeta correspondiente.
+
+
+Instrucciones:
+    Para correr el programa es necesario correr los siguientes comandos en orden:
+                $ make clean
+                $ make all
+                $ ./output
+    Finalmente, el programa deriva a un menú de opcionas con las cuales se podrá 
+    interactuar según desee.

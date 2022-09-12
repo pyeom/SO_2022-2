@@ -3,6 +3,8 @@
 #include <string.h> 
 #include <dirent.h>
 
+#include "funciones.h"
+
 
 void leer(char *nombre, char *directorio){
     char buffer[50];
