@@ -20,9 +20,8 @@ void leer(char *nombre, char *directorio){
         printf("Error: could not open file %s \n", buffer);
         return;
     }
-
+    
     fscanf(fp, "%d\n%d", &anno, &prioridad);
-
     //printf ("el anno es '%d' y su prioridad '%d' \n", anno, prioridad);
     char aux[100];
     if (anno == 2019){
@@ -100,16 +99,12 @@ void mover () {
     struct dirent *pDirent;
     DIR *pDir;
 
-    // Ensure correct argument count.
-
-    // Ensure we can open directory.
-
     pDir = opendir ("./test");
     if (pDir == NULL) {
         printf ("Cannot open directory '%s'\n", "test");
     }
 
-    // Process each entry.
+    // Procesar cada entrada.
 
     while ((pDirent = readdir(pDir)) != NULL)  {
         if((strcmp(pDirent->d_name,".")==0 || strcmp(pDirent->d_name,"..")==0 || (*pDirent->d_name) == '.' )){}

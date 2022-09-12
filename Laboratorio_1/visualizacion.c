@@ -11,13 +11,14 @@ void listFiles(const char* dirname, int anno, int number, int *cantidad_total, i
         return;
     }
 
-    printf("Reading files in: %s\n", dirname);
+    printf("Leyendo archivos en: %s\n", dirname);
 
     struct dirent* entity;
     entity = readdir(dir);
     while (entity != NULL) {
         if (strcmp(entity->d_name, ".") != 0 && strcmp(entity->d_name, "..") != 0) {
             *cant_prio += 1;
+            //number sera 1 si estamos en el año que nos piden, 0 si no es el caso
             if (number == 1){
                 *cantidad_total += 1;
                 *cant_annoprio += 1;
