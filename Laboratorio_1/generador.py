@@ -13,7 +13,8 @@ def gen_nombre(cant):
     return lista
 
 def crear(cant, lista):
-    path = ""
+    path = os.path.abspath(os.getcwd())
+    path = os.path.join(path + "/Laboratorio_1")
     if not os.path.isdir(path + "/test"):
         os.mkdir(os.path.join(path, "test"))
     for i in range(cant):
