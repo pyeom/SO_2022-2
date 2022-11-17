@@ -1,20 +1,9 @@
-all: output
+all: output run
 
-output: clean main.o orden.o visualizacion.o run
-	gcc -o output main.o orden.o visualizacion.o
-
-main.o: main.c funciones.h
-	gcc -c main.c
-
-orden.o: orden.c funciones.h
-	gcc -c orden.c
-
-visualizacion.o: visualizacion.c funciones.h
-	gcc -c visualizacion.c
+output: main.c
+	gcc -o output.exe main.c
 
 run:
-	./output
+	./output.exe
 
-clean:
-	rm -f output *.o
 
