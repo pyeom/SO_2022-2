@@ -5,5 +5,3 @@ output: main.c
 
 run:
 	./output.exe
-
-
