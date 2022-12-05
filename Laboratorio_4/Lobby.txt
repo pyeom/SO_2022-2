@@ -1,0 +1,78 @@
+Jugador[1], 21:34:39, Partida Versus, 21:34:39
+Jugador[2], 21:34:39, Partida Rápida, 21:34:39
+Jugador[3], 21:34:40, Partida Rápida, 21:34:40
+Jugador[4], 21:34:40, Partida Especial de Navidad, 21:34:40
+Jugador[5], 21:34:40, Partida Especial de Navidad, 21:34:40
+Jugador[6], 21:34:41, Partida Versus, 21:34:41
+Jugador[7], 21:34:41, Partida Especial de Navidad, 21:34:41
+Jugador[8], 21:34:41, Partida Rápida, 21:34:41
+Jugador[9], 21:34:42, Partida Estándar, 21:34:42
+Jugador[10], 21:34:42, Partida Rápida, 21:34:42
+Jugador[11], 21:34:42, Partida Estándar, 21:34:42
+Jugador[12], 21:34:43, Partida Estándar, 21:34:43
+Jugador[13], 21:34:43, Partida Especial de Navidad, 21:34:43
+Jugador[14], 21:34:43, Partida Rápida, 21:34:43
+Jugador[15], 21:34:43, Partida Rápida, 21:34:43
+Jugador[16], 21:34:44, Partida Especial de Navidad, 21:34:44
+Jugador[17], 21:34:44, Partida Estándar, 21:34:44
+Jugador[18], 21:34:44, Partida Versus, 21:34:44
+Jugador[19], 21:34:45, Partida Rápida, 21:34:45
+Jugador[20], 21:34:45, Partida Rápida, 21:34:45
+Jugador[21], 21:34:45, Partida Especial de Navidad, 21:34:45
+Jugador[22], 21:34:46, Partida Versus, 21:34:46
+Jugador[23], 21:34:46, Partida Rápida, 21:34:46
+Jugador[24], 21:34:46, Partida Especial de Navidad, 21:34:46
+Jugador[25], 21:34:47, Partida Versus, 21:34:47
+Jugador[26], 21:34:47, Partida Rápida, 21:34:47
+Jugador[27], 21:34:47, Partida Estándar, 21:34:47
+Jugador[28], 21:34:48, Partida Estándar, 21:34:48
+Jugador[29], 21:34:48, Partida Estándar, 21:34:48
+Jugador[30], 21:34:48, Partida Estándar, 21:34:48
+Jugador[31], 21:34:48, Partida Estándar, 21:34:48
+Jugador[32], 21:34:49, Partida Estándar, 21:34:49
+Jugador[33], 21:34:49, Partida Versus, 21:34:49
+Jugador[34], 21:34:49, Partida Especial de Navidad, 21:34:49
+Jugador[36], 21:34:50, Partida Estándar, 21:34:50
+Jugador[40], 21:34:51, Partida Estándar, 21:34:51
+Jugador[41], 21:34:52, Partida Estándar, 21:34:52
+Jugador[42], 21:34:52, Partida Estándar, 21:34:52
+Jugador[44], 21:34:52, Partida Versus, 21:34:52
+Jugador[47], 21:34:53, Partida Versus, 21:34:53
+Jugador[48], 21:34:54, Partida Estándar, 21:34:54
+Jugador[49], 21:34:54, Partida Versus, 21:34:54
+Jugador[52], 21:34:55, Partida Versus, 21:34:55
+Jugador[57], 21:34:57, Partida Estándar, 21:34:57
+Jugador[58], 21:34:57, Partida Estándar, 21:34:57
+Jugador[60], 21:34:57, Partida Estándar, 21:34:57
+Jugador[61], 21:34:58, Partida Versus, 21:34:58
+Jugador[62], 21:34:58, Partida Estándar, 21:34:58
+Jugador[64], 21:34:59, Partida Versus, 21:34:59
+Jugador[65], 21:34:59, Partida Versus, 21:34:59
+Jugador[68], 21:35:00, Partida Versus, 21:35:00
+Jugador[70], 21:35:01, Partida Estándar, 21:35:01
+Jugador[73], 21:35:01, Partida Estándar, 21:35:01
+Jugador[77], 21:35:03, Partida Estándar, 21:35:03
+Jugador[79], 21:35:03, Partida Versus, 21:35:03
+Jugador[80], 21:35:04, Partida Versus, 21:35:04
+Jugador[81], 21:35:04, Partida Estándar, 21:35:04
+Jugador[82], 21:35:04, Partida Versus, 21:35:04
+Jugador[84], 21:35:05, Partida Versus, 21:35:05
+Jugador[86], 21:35:05, Partida Versus, 21:35:05
+Jugador[87], 21:35:06, Partida Versus, 21:35:06
+Jugador[89], 21:35:06, Partida Estándar, 21:35:06
+Jugador[92], 21:35:07, Partida Estándar, 21:35:07
+Jugador[93], 21:35:08, Partida Versus, 21:35:08
+Jugador[96], 21:35:09, Partida Versus, 21:35:09
+Jugador[99], 21:35:10, Partida Estándar, 21:35:10
+Jugador[102], 21:35:10, Partida Estándar, 21:35:10
+Jugador[104], 21:35:11, Partida Estándar, 21:35:11
+Jugador[100], 21:35:10, Partida Versus, 21:35:12
+Jugador[103], 21:35:11, Partida Versus, 21:35:12
+Jugador[107], 21:35:12, Partida Estándar, 21:35:12
+Jugador[109], 21:35:13, Partida Estándar, 21:35:13
+Jugador[113], 21:35:14, Partida Estándar, 21:35:14
+Jugador[114], 21:35:14, Partida Estándar, 21:35:14
+Jugador[108], 21:35:12, Partida Versus, 21:35:15
+Jugador[105], 21:35:11, Partida Versus, 21:35:15
+Jugador[119], 21:35:16, Partida Versus, 21:35:18
+Jugador[118], 21:35:15, Partida Versus, 21:35:18
